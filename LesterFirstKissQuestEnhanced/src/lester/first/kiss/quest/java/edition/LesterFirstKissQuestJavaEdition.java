@@ -76,7 +76,7 @@ public class LesterFirstKissQuestJavaEdition {
     public static void newgame(){
         dias = 1;
         lester = new Personaje(100,2000,0);
-        ligueActual = new Ligue("Tilina", 5, new String[] {"Nulo", "Interesada", "Amigos", "Quedantes", "Novios"}, 5);
+        ligueActual = null;
         hablar_uso = false;
         choice = false;
         tener_ligue = true;
@@ -111,6 +111,7 @@ public class LesterFirstKissQuestJavaEdition {
                         System.out.println("\nHas llegado al maximo nivel de carisma\n");
                     }
                     else{
+                        cinematicas.delay(1);
                         hablar();
                     }
                     break;
@@ -123,6 +124,7 @@ public class LesterFirstKissQuestJavaEdition {
                     }  
                     break;
                 case 4:
+                    cinematicas.delay(1);
                     tienda.irTienda(lester);
                     break;
                 case 5:
@@ -170,8 +172,10 @@ public class LesterFirstKissQuestJavaEdition {
             System.out.println("\nNo tienes ganas de ir a Trabajar\n");
         }
         else{
+            cinematicas.delay(1);
             lester.resEnergia(50);
             lester.sumDinero(50);
+            cinematicas.delay(1);
             System.out.println("\nRegresas a Casa, despues de un arduo dia de trabajo\n");
         }
     }
@@ -185,6 +189,7 @@ public class LesterFirstKissQuestJavaEdition {
                 System.out.println("\nNo tienes dinero para Salir de fiesta\n");
             }
             else{
+                cinematicas.delay(1);
                 lester.resEnergia(30);
                 lester.resDinero(10);
                 Ligue ligueSeleccionado = fiesta.chicas(lester);
