@@ -1,7 +1,7 @@
 package lester.first.kiss.quest.java.edition;
 
 public class Cinematicas {
-    public void delay(int seconds) {
+    public static void delay(int seconds) {
         try {
             Thread.sleep(seconds * 1000);
         } catch (InterruptedException e) {

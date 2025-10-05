@@ -111,7 +111,7 @@ public class LesterFirstKissQuestJavaEdition {
                         System.out.println("\nHas llegado al maximo nivel de carisma\n");
                     }
                     else{
-                        cinematicas.delay(1);
+                        Cinematicas.delay(1);
                         hablar();
                     }
                     break;
@@ -124,7 +124,7 @@ public class LesterFirstKissQuestJavaEdition {
                     }  
                     break;
                 case 4:
-                    cinematicas.delay(1);
+                    Cinematicas.delay(1);
                     tienda.irTienda(lester);
                     break;
                 case 5:
@@ -144,7 +144,7 @@ public class LesterFirstKissQuestJavaEdition {
                     } 
                     else if(dias == 49  && lester.getDinero() >= 2000 && !primer_beso){
                         System.out.println("\nNo diste tu primer beso, tendras que ejecutar el Plan De Lester\n");
-                        cinematicas.delay(1);
+                        Cinematicas.delay(1);
                         cinematicas.normEnding(lester);
                         SaveSystem.saveGame(dias, lester, ligueActual, tener_ligue, primer_beso, fin_juego);
                         break;
@@ -172,10 +172,10 @@ public class LesterFirstKissQuestJavaEdition {
             System.out.println("\nNo tienes ganas de ir a Trabajar\n");
         }
         else{
-            cinematicas.delay(1);
+            Cinematicas.delay(1);
             lester.resEnergia(50);
             lester.sumDinero(50);
-            cinematicas.delay(1);
+            Cinematicas.delay(1);
             System.out.println("\nRegresas a Casa, despues de un arduo dia de trabajo\n");
         }
     }
@@ -189,7 +189,7 @@ public class LesterFirstKissQuestJavaEdition {
                 System.out.println("\nNo tienes dinero para Salir de fiesta\n");
             }
             else{
-                cinematicas.delay(1);
+                Cinematicas.delay(1);
                 lester.resEnergia(30);
                 lester.resDinero(10);
                 Ligue ligueSeleccionado = fiesta.chicas(lester);

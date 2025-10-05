@@ -27,7 +27,7 @@ public class Tienda{
     }
 
     public void irTienda(Personaje personaje) {
-        System.out.println("\nCajero: Bienvenido ¿En que te puedo servir?\"\n");
+        System.out.println("\nCajero: Bienvenido ¿En que te puedo servir?\n");
         int compra_item;
 
         do{
@@ -40,7 +40,8 @@ public class Tienda{
                 System.out.println("\nSelecciona una opción valida\n");
             } 
             else if (compra_item == getItemsDisponibles().length + 1) {
-                System.out.println("\nSaliendo de la Tienda...\n");
+                System.out.println("\nCajero: Gracias por Comprar ¡Vuelva Pronto!\n");
+                Cinematicas.delay(1);
                 break;
             } 
             else {
